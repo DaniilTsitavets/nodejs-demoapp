@@ -3,3 +3,8 @@ variable "alert_email" {
   type = list(string)
   default = []
 }
+
+variable "environment" {
+  description = "Work environment name e.g dev/production"
+  type = string
+}

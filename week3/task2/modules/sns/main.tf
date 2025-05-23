@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "demo_scale_up_email" {
-  name = "email_scale_up_trigger_topic"
+  name = "email_scale_up_trigger_topic${var.environment}"
 }
 
 resource "aws_sns_topic_subscription" "email_addresses" {

@@ -1,5 +1,5 @@
 resource "aws_launch_template" "demo_lt" {
-  name_prefix   = "demo-lt-"
+  name_prefix   = "lt-${var.environment}"
   image_id      = var.ec2_ami_id
   instance_type = var.ec2_instance_type
 

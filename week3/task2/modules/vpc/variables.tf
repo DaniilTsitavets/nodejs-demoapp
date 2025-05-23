@@ -1,5 +1,5 @@
-variable "env_name" {
-  description = "This var used only to name vpc"
+variable "environment" {
+  description = "This var used to name vpc"
   type        = string
 }
 

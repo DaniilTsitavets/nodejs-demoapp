@@ -19,3 +19,8 @@ variable "path_to_user_data" {
   description = "Path to user-data script file"
   type        = string
 }
+
+variable "environment" {
+  description = "Work environment name e.g dev/production"
+  type = string
+}

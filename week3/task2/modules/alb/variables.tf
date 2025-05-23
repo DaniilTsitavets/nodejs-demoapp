@@ -11,3 +11,8 @@ variable "alb_sg" {
   description = "ALB security group with inbound 80 port"
   type = string
 }
+
+variable "environment" {
+  description = "Work environment name e.g dev/production"
+  type = string
+}

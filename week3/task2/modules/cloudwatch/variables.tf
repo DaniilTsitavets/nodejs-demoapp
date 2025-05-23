@@ -12,3 +12,8 @@ variable "scale_up_sns_topic" {
   description = "Connect sns topic to notify certain emails about scaling up"
   type = string
 }
+
+variable "environment" {
+  description = "This var used to name vpc"
+  type        = string
+}

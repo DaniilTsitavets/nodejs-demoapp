@@ -2,7 +2,7 @@ resource "aws_vpc" "task2_vpc" {
   cidr_block = var.vpc_cidr
 
   tags = {
-    Name = "demo-${var.env_name}-vpc"
+    Name = "${var.environment}-vpc"
   }
 }
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "public_subnet" {
   vpc_id            = aws_vpc.task2_vpc.id
 
   tags = {
-    Name = "demo-${var.env_name}-public-subnet-${var.subnet_az[count.index]}"
+    Name = "${var.environment}-public-subnet-${var.subnet_az[count.index]}"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_route_table" "vpc_rt" {
   }
 
   tags = {
-    Name = "demo-${var.env_name}-route-table"
+    Name = "${var.environment}-route-table"
   }
 }
 

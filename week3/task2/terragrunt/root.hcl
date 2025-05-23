@@ -1,7 +1,6 @@
 locals {
   environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
   aws_region = "eu-north-1"
-  # user_data_path = find_in_parent_folders("_envcommon/user_data/user-data.sh")
 }
 
 generate "provider" {
@@ -30,10 +29,3 @@ remote_state {
 }
 
 inputs = local.environment_vars.locals
-
-# inputs = merge(
-#   local.environment_vars.locals,
-#   {
-#     user_data_path = local.user_data_path
-#   }
-# )

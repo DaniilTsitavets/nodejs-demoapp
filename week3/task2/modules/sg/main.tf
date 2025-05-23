@@ -1,5 +1,5 @@
 resource "aws_security_group" "demo_alb_sg" {
-  name   = "demo_alb_sg"
+  name   = "alb-sg-${var.environment}"
   vpc_id = var.vpc_id
 
   ingress {
@@ -18,7 +18,7 @@ resource "aws_security_group" "demo_alb_sg" {
 }
 
 resource "aws_security_group" "demo_ec2_sg" {
-  name   = "demo_ec2_sg"
+  name   = "ec2_sg-${var.environment}"
   vpc_id = var.vpc_id
 
   ingress {

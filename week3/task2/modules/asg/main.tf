@@ -11,7 +11,7 @@ resource "aws_autoscaling_group" "demo_asg" {
   }
   tag {
     key                 = "Name"
-    value               = "demo-instance"
+    value               = "demo-instance-${var.environment}"
     propagate_at_launch = true
   }
 

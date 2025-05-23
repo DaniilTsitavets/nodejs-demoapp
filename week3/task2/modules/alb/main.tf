@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "demo_tg" {
-  name     = "demo-tg"
+  name     = "tg-${var.environment}"
   port     = 3000
   protocol = "HTTP"
   vpc_id   = var.vpc_id
@@ -14,7 +14,7 @@ resource "aws_lb_target_group" "demo_tg" {
 }
 
 resource "aws_lb" "demo_alb" {
-  name               = "demo-alb"
+  name               = "alb-${var.environment}"
   internal           = false
   load_balancer_type = "application"
   security_groups = [var.alb_sg]

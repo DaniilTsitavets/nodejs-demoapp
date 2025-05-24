@@ -25,7 +25,7 @@ module "docdb" {
   source                = "./modules/docdb"
   docdb_instance_class  = "db.t3.medium"
   docdb_instance_count  = "1"
-  docdb_master_password = "password"
+  docdb_master_password = "password" //TODO move to .env or imagine that u do not see it
   docdb_master_username = "master"
   docdb_sg              = module.sg.docdb_sg_id
   private_subnets       = module.vpc.private_subnets
